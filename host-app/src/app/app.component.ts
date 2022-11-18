@@ -5,6 +5,13 @@ export interface Mfe1AppComponent {
   letsDoSomeWorkInTheRemoteComponent(message: string): string
 }
 
+/**
+ * TODO
+ *  [x] load a federated module and place a component programmatically into the host
+ *  [x] communicate between the host and remote through a defined interface
+ *  [] communicate between the host, rahmen and remote in a decoupled fashion without a defined interface
+ *  [] find a mechanism (lib, wrapper, etc) to decouple all the knowledge needed to import a federated module from the host or rahmen
+ */
 
 @Component({
   selector: 'app-root',
