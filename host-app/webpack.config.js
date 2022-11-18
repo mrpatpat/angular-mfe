@@ -28,6 +28,7 @@ module.exports = {
     new ModuleFederationPlugin({
         library: { type: "module" },
 
+        // This tells webpack that every mfe1 prefixed import is to be lazy loaded from this remote.
         remotes: {
             "mfe1": "http://localhost:4201/remoteEntry.js",
         },

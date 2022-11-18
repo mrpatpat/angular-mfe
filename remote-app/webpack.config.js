@@ -28,7 +28,7 @@ module.exports = {
     new ModuleFederationPlugin({
         library: { type: "module" },
 
-        // For remotes (please adjust)
+        // This exposes a single component cia webpack5's module federation as described in https://www.angulararchitects.io/aktuelles/module-federation-with-angulars-standalone-components/
         name: "remoteApp",
         filename: "remoteEntry.js",
         exposes: {
