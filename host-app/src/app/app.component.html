@@ -2,8 +2,15 @@ Hello from Host!
 Please click the button to load the remote-app dynamically below:
 
 <div>
-  <button (click)="load()">Load!</button>
+  <button (click)="load()">Load another!</button>
 </div>
+
+<div>
+  <button (click)="maskAll()">Mask all messages!</button>
+</div>
+
+Loading: {{isLoading}}
+
 
 <div #placeHolder></div>
 
