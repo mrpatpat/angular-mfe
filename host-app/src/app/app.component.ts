@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, OnInit, ViewChild, ViewContainerRef} from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +7,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'host-app';
+
+  @ViewChild('placeHolder', { read: ViewContainerRef })
+  viewContainer!: ViewContainerRef;
+
+  async load(): Promise<void> {
+
+    const m = await import('mfe1/AppComponent');
+    const ref = this.viewContainer.createComponent(m.AppComponent);
+    // const compInstance = ref.instance;
+    // compInstance.ngOnInit()
+  }
 }

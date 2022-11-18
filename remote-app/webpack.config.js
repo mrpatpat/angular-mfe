@@ -15,7 +15,7 @@ module.exports = {
   },
   optimization: {
     runtimeChunk: false
-  },   
+  },
   resolve: {
     alias: {
       ...sharedMappings.getAliases(),
@@ -29,27 +29,21 @@ module.exports = {
         library: { type: "module" },
 
         // For remotes (please adjust)
-        // name: "remoteApp",
-        // filename: "remoteEntry.js",
-        // exposes: {
-        //     './Component': './/src/app/app.component.ts',
-        // },        
-        
-        // For hosts (please adjust)
-        // remotes: {
-        //     "mfe1": "http://localhost:3000/remoteEntry.js",
-
-        // },
+        name: "remoteApp",
+        filename: "remoteEntry.js",
+        exposes: {
+            './AppComponent': './/src/app/app.component.ts',
+        },
 
         shared: share({
-          "@angular/core": { singleton: true, strictVersion: true, requiredVersion: 'auto' }, 
-          "@angular/common": { singleton: true, strictVersion: true, requiredVersion: 'auto' }, 
-          "@angular/common/http": { singleton: true, strictVersion: true, requiredVersion: 'auto' }, 
+          "@angular/core": { singleton: true, strictVersion: true, requiredVersion: 'auto' },
+          "@angular/common": { singleton: true, strictVersion: true, requiredVersion: 'auto' },
+          "@angular/common/http": { singleton: true, strictVersion: true, requiredVersion: 'auto' },
           "@angular/router": { singleton: true, strictVersion: true, requiredVersion: 'auto' },
 
           ...sharedMappings.getDescriptors()
         })
-        
+
     }),
     sharedMappings.getPlugin()
   ],
