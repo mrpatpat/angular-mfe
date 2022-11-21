@@ -11,6 +11,7 @@ export interface Mfe1AppComponent {
  *  [x] communicate between the host and remote through a defined interface
  *  [] communicate between the host, rahmen and remote in a decoupled fashion without a defined interface
  *  [] find a mechanism (lib, wrapper, etc) to decouple all the knowledge needed to import a federated module from the host or rahmen
+ *  [] can we move the whole definition of the communication interface and names into a meta endpoint in the remote service?
  */
 
 @Component({
